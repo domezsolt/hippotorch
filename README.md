@@ -1,5 +1,8 @@
 # hippotorch
 
+[![CI](https://img.shields.io/github/actions/workflow/status/domezsolt/hippotorch/workflow.yml?branch=main&label=CI&logo=github)](https://github.com/domezsolt/hippotorch/actions/workflows/workflow.yml)
+[![PyPI](https://img.shields.io/pypi/v/hippotorch.svg?logo=pypi&logoColor=white)](https://pypi.org/project/hippotorch/)
+
 > **Differentiable episodic memory for RL. Retrieves what matters. Forgets what doesn't.**
 
 **hippotorch** is a PyTorch library that replaces standard replay buffers with a learnable memory system. It uses **reward-aware contrastive learning** to organize experiences and **hybrid sampling** to retrieve them—solving the temporal credit assignment problem in sparse-reward, long-horizon tasks.

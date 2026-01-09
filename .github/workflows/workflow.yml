@@ -1,6 +1,10 @@
-name: Publish hippotorch to PyPI
+name: CI and Publish
 
 on:
+  push:
+    branches:
+      - main
+  pull_request:
   release:
     types:
       - published
@@ -11,7 +15,33 @@ permissions:
   id-token: write
 
 jobs:
+  tests:
+    name: Tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run tests
+        run: pytest
+
   build-and-publish:
+    needs: tests
+    if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: read
