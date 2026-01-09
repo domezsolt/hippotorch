@@ -1,0 +1,9 @@
+# Development and QA dependencies
+pytest>=7.0
+pytest-cov>=4.0
+black>=23.7
+ruff>=0.1.7
+isort>=5.12
+mypy>=1.7
+pre-commit>=3.5
+

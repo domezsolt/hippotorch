@@ -1,0 +1,8 @@
+# Core library (minimal)
+torch
+numpy
+
+# Note:
+# - Gym and environment packages are optional; see requirements-extras.txt.
+# - For GPU builds of PyTorch, follow the selector at https://pytorch.org/get-started/locally/
+#   and install the appropriate wheel before or after this file.

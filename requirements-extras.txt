@@ -1,0 +1,12 @@
+# Optional environment packages (install only as needed)
+
+# Core Gym API (prebuilt wheels available)
+gymnasium==0.29.*
+
+# MiniGrid (requires pygame; wheels may trigger SDL build on some systems)
+# If build fails, install system deps (e.g., libsdl2-dev) or skip this package.
+gymnasium-minigrid
+
+# Robotics (requires mujoco and system tooling; install only if needed)
+gymnasium-robotics
+

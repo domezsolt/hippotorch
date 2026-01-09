@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hippotorch"
+version = "0.3.0-alpha"
+description = "Differentiable episodic memory for reinforcement learning."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Döme Zsolt" }]
+keywords = [
+  "reinforcement-learning",
+  "episodic-memory",
+  "pytorch",
+  "replay-buffer",
+  "rl",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Framework :: PyTorch",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "torch>=2.0",
+  "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "black>=23.7",
+  "ruff>=0.1.7",
+  "isort>=5.12",
+  "mypy>=1.7",
+  "pre-commit>=3.5",
+]
+envs = [
+  "gymnasium==0.29.*",
+  "gymnasium-minigrid",
+  "gymnasium-robotics",
+]
+faiss = ["faiss-gpu"]
+
+[tool.setuptools.packages.find]
+include = ["hippotorch*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [
+  ".venv",
+]
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["E402"]
+"hippotorch/utils/hub.py" = ["E402"]
