@@ -4,6 +4,8 @@
 
 **hippotorch** is a PyTorch library that replaces standard replay buffers with a learnable memory system. It uses **reward-aware contrastive learning** to organize experiences and **hybrid sampling** to retrieve them—solving the temporal credit assignment problem in sparse-reward, long-horizon tasks.
 
+**Install:** `pip install hippotorch`
+
 ---
 
 ### Key Hyperparameters
