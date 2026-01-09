@@ -1,7 +1,7 @@
 # hippotorch
 
-[![CI](https://img.shields.io/github/actions/workflow/status/domezsolt/hippotorch/workflow.yml?branch=main&label=CI&logo=github)](https://github.com/domezsolt/hippotorch/actions/workflows/workflow.yml)
-[![PyPI](https://img.shields.io/pypi/v/hippotorch.svg?logo=pypi&logoColor=white)](https://pypi.org/project/hippotorch/)
+[![Linux CI](https://img.shields.io/github/actions/workflow/status/domezsolt/hippotorch/workflow.yml?branch=main&label=Ubuntu&logo=ubuntu)](https://github.com/domezsolt/hippotorch/actions/workflows/workflow.yml)
+[![Windows CI](https://img.shields.io/github/actions/workflow/status/domezsolt/hippotorch/workflow.yml?branch=main&label=Windows&logo=windows)](https://github.com/domezsolt/hippotorch/actions/workflows/workflow.yml)
 
 > **Differentiable episodic memory for RL. Retrieves what matters. Forgets what doesn't.**
 
