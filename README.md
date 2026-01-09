@@ -1,4 +1,4 @@
-# hippotorch 🧠🔥
+# hippotorch
 
 > **Differentiable episodic memory for RL. Retrieves what matters. Forgets what doesn't.**
 
